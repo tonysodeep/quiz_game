@@ -21,10 +21,20 @@ class Resutl extends StatelessWidget {
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
-          FlatButton(
+          TextButton(
             onPressed: this.resetQuiz,
             child: Text('Restart Quiz'),
-            textColor: Colors.blue,
+            style: TextButton.styleFrom(
+              primary: Colors.orange,
+            ),
+          ),
+          OutlinedButton(
+            onPressed: () => print('hello'),
+            child: Text('outlinedButton'),
+            style: OutlinedButton.styleFrom(
+              primary: Colors.cyan,
+              side: BorderSide(color: Colors.black),
+            ),
           ),
         ],
       ),
