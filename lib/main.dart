@@ -52,6 +52,13 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  void _resetQuiz() {
+    setState(() {
+      _questionIndex = 0;
+      _totalScore = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // var dummy = const ['hello'];
@@ -68,7 +75,7 @@ class _MyAppState extends State<MyApp> {
                 questions: _questions,
                 questionIndex: _questionIndex,
               )
-            : Resutl(),
+            : Resutl(_totalScore,_resetQuiz),
       ),
     );
   }
